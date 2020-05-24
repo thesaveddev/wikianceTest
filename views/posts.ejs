@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Welcome To Wikiance</h1>
+                <hr>
+                <p class="lead">Please have a nice time reading our latest stories</p>
+                <a href="/posts" class="btn btn-success btn-lg">Explore</a>
+            </div>
+        </div>
+        
+        <h2>Latest Posts</h2>
+
+        
+        <% for(post of posts){ %>
+            <div class="post">
+                <span> Post Author: User <%= post.userId %> </span>
+                <br>
+                <span> Post Id: <%= post.id %> </span>
+                <br>
+                <a class="post-title"> <%= post.title %> </a>
+                <p class="post-body"> <%= post.body %> </p>
+                <hr>
+            </div>
+            <% } %>
+            
+        </div>
+        
+</body>
+<%- include('partials/footer') %>
+
+
